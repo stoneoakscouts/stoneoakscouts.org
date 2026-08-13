@@ -1,7 +1,7 @@
 ---
 ---
 
-$imageurl: "https://scouts226.com/images";
+$imageurl: "{{ site.imageurl }}";
 
 @import "normalize";
 @import "skeleton";

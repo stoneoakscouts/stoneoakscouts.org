@@ -1,4 +1,9 @@
-url: https://scouts226.com
-title: Scouts 226
-imageurl: https://scouts226.com/images
+url: https://stoneoakscouts.org
+title: Stone Oak Scouts
+imageurl: https://stoneoakscouts.org/images
 exclude: ["README.md"]
+kramdown:
+  auto_ids: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  typographic_symbols:
+    hellip: "..."

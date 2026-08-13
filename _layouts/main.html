@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta
       name="keywords"
-      content="troop 226, troop 226g, pack 226, troop, pack, 226, 226g, scouts, scouting, cbc"
+      content="troop 226, troop 226g, pack 226, troop, pack, 226, 226g, scouts, scouting, stone oak church, stone oak scouts, stone oak"
     />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link
       rel="stylesheet"
-      text="text/scss"
+      type="text/css"
       href="{{'/assets/css/main.css' | relative_url}}"
     />
-    <title>{{page.title | default: "Scouts 226"}}</title>
+    <title>{{page.title | default: site.title}}</title>
   </head>
   <body>
     <div class="page-container">
@@ -21,9 +21,9 @@
           <div class="banner">
             <div class="container" style="overflow: hidden">
               <div class="row">
-                <h1 class="title ten columns">Scouts 226</h1>
+                <h1 class="title ten columns">{{site.title}}</h1>
                 <img
-                  src="{{site.imageurl}}/logo.png"
+                  src="{{site.imageurl}}/website_designed_logo.png"
                   height="60px"
                   width="60px"
                   class="logo u-pull-right two columns"
@@ -36,10 +36,8 @@
               <div class="row">
                 <ul class="twelve columns">
                   <li><a href="{{'/' | relative_url}}">Home</a></li>
-                  <li><a href="{{'/about.html' | relative_url}}">About</a></li>
-                  <li>
-                    <a href="{{'/stories.html' | relative_url}}">Stories</a>
-                  </li>
+                  <li><a href="{{'/about' | relative_url}}">About</a></li>
+                  <li><a href="{{'/join' | relative_url}}">Join</a></li>
                 </ul>
               </div>
             </div>
@@ -48,7 +46,7 @@
         <main class="container">{{content}}</main>
       </div>
       <footer>
-        <p class="row u-center">Copyright &copy; 2021</p>
+        <p class="row u-center">Copyright &copy; 2024</p>
       </footer>
     </div>
   </body>

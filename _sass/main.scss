@@ -37,7 +37,7 @@ blockquote p {
   display: inline;
 }
 footer {
-  background: no-repeat bottom/100% url($imageurl + "/scout_footer.jpg");
+  background: no-repeat bottom/100% url($imageurl + "/scout_footer.png");
   bottom: 0;
   height: 22.5rem;
   position: absolute;
@@ -89,9 +89,6 @@ main {
   min-height: 100vh;
   position: relative;
 }
-.post-snippet {
-  margin-top: 3rem;
-}
 .u-center {
   text-align: center;
 }
@@ -100,28 +97,9 @@ main {
   max-width: 100%;
   padding: 2.5rem 0;
 }
-.square-photo-right {
-  // aspect-ratio: 1; TODO: uncomment after images are adjusted
-  box-sizing: border-box;
-  width: 300px;
-  float: right;
-  margin: 0 0 2.5rem 2.5rem;
-}
-.banner-photo {
-  box-sizing: border-box;
-  aspect-ratio: 96/30;
-  width: 100%;
-  margin: 0 0 2.5rem 0;
-}
 
 @media (max-width: 550px) {
   .logo {
     display: none;
-  }
-}
-@media (max-width: 1000px) {
-  .smaller-than-tablet-stacked {
-    width: 100% !important;
-    margin-left: 0;
   }
 }

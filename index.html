@@ -5,7 +5,7 @@ layout: main
 <div class="row">
   <div class="twelve columns">
       <img
-      src="{{site.imageurl}}/main_meeting.jpg"
+      src="{{site.imageurl}}/group-scouts.png"
       alt="Scouts serving others"
       class="wide-photo"
     />
@@ -16,18 +16,7 @@ layout: main
       for life! To prepare scouts to make good choices, the scouting program
       focuses on character development, leadership development, citizenship
       training, and personal fitness. Our scouting units are blessed to partner
-      with Community Bible Church.
+      with Stone Oak Church.
     </p>
   </div>
 </div>
-
-{% for post in site.posts limit:3 %}
-{% include post_snippet.html
-    title=post.title
-    url=post.url
-    post_date=post.date
-    content=post.content
-    primary_image=post.primary_image
-    primary_image_alt=post.primary_image_alt
-%}
-{% endfor %}
