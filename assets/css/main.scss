@@ -1,8 +1,8 @@
 ---
 ---
 
-$imageurl: "{{ site.imageurl }}";
-
-@import "normalize";
-@import "skeleton";
-@import "main";
+@use "normalize";
+@use "skeleton";
+@use "theme" with (
+  $imageurl: "{{ site.imageurl }}"
+);
