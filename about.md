@@ -7,7 +7,7 @@ permalink: /about/
 
 Some of the fun events that our pack does throughout the year include Family
 Campouts, service projects, monthly activities, and the celebration of our Arrow
-of Light Den crossing over to the Boy Scouts Troop at our annual Blue and Gold
+of Light Den crossing over to Boys Troop 226 or Girls Troop 226G at our annual Blue and Gold
 Banquet in February.
 
 Our troops typically camp one weekend a month and provide scouts with several

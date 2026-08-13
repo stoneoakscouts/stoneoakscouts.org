@@ -1,0 +1,57 @@
+---
+layout: chrome
+permalink: /leaders/
+title: Leaders · Stone Oak Scouts
+description: Meet the volunteer leaders of Pack 226, Boys Troop 226, and Girls Troop 226G.
+---
+
+<div class="row">
+  <div class="twelve columns">
+    <h2>Leaders</h2>
+    <p>
+      Our units are led by trained volunteer adults. These are some of the
+      people families meet in Pack 226, Boys Troop 226, and Girls Troop 226G.
+    </p>
+    <p class="leader-jump">
+      {%- for group in site.data.leaders.groups %}
+        {%- unless forloop.first %} · {% endunless %}
+        <a href="#{{ group.id }}">{{ group.heading }}</a>
+      {%- endfor %}
+    </p>
+  </div>
+</div>
+
+{% for group in site.data.leaders.groups %}
+<div class="row">
+  <div class="twelve columns leader-group">
+    <h3 id="{{ group.id }}">{{ group.heading }}</h3>
+    {% if group.blurb %}<p>{{ group.blurb }}</p>{% endif %}
+  </div>
+</div>
+{% for leader in group.leaders %}
+<div class="row leader-card">
+  {% if leader.photo %}
+  <div class="four columns">
+    <img
+      class="leader-photo"
+      src="{{ site.imageurl }}/{{ leader.photo }}"
+      alt="{{ leader.name }}"
+      width="{{ leader.photo_width }}"
+      height="{{ leader.photo_height }}"
+    />
+  </div>
+  <div class="eight columns">
+  {% else %}
+  <div class="twelve columns">
+  {% endif %}
+    <h4>{{ leader.name }}</h4>
+    <p class="leader-title">{{ leader.title }}</p>
+    {% if leader.also %}<p class="leader-also">{{ leader.also }}</p>{% endif %}
+    {% for paragraph in leader.paragraphs %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
+    {% if leader.aside %}<p class="leader-aside">{{ leader.aside }}</p>{% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endfor %}
