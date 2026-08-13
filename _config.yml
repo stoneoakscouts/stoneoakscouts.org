@@ -1,5 +1,6 @@
 url: https://stoneoakscouts.org
 title: Stone Oak Scouts
+description: Cub Scout Pack 226 and Scouts BSA Troops 226 and 226G, a ministry of Stone Oak Church in San Antonio.
 imageurl: https://stoneoakscouts.org/images
 exclude: ["README.md"]
 kramdown:

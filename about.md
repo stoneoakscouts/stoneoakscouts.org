@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 permalink: /about/
 ---
 
@@ -22,6 +22,4 @@ says:
 > Train up a child in the way they should go and when they are old they will not depart from it.
 
 As a partner of Stone Oak Church, we incorporate the teaching of biblical
-principles that are consistent with [Stone Oak Church Statement of Faith].
-
-[Stone Oak Church Statement of Faith]: https://www.stoneoakchurch.org/about
+principles that are consistent with [Stone Oak Church Statement of Faith]({{ site.data.units.church.statement_of_faith }}).

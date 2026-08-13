@@ -1,25 +1,28 @@
-# Scouts 226 Website
+# Stone Oak Scouts website
 
-To test locally, you need to have a recent-ish version of ruby installed (ruby
-2.4 or newer). Run the following to get up and running:
+Jekyll source for [stoneoakscouts.org](https://stoneoakscouts.org).
+
+## Local setup
+
+Use Ruby 3.4 (see `.ruby-version`). [rbenv](https://github.com/rbenv/rbenv) is a
+good way to install it.
 
 ```
-gem install bundler
 bundle install
 bundle exec jekyll serve -l
 ```
 
-That should install jekyll and its dependencies, then start a live server.
+That starts a live-reloading server. Images are not in this repo. They live in
+the `stoneoakscouts-images-origin` S3 bucket and are served from
+`https://stoneoakscouts.org/images/`. Local preview uses those same URLs, so you
+need network access to see logos and photos.
 
 ## Layouts
 
-If you write a simlpe page, often in markdown for the website, you will probably
-use the `default` layout. It has a single row and a 12 column div ready for your
-content. If your page has multiple rows, the `main` layout is what you want. In
-this layout, you are responsible for creating your own divs for the rows and
-columns.
+`chrome` is the site shell: header, nav, and footer. Markdown pages should use
+`page`, which wraps content in a single 12-column row. If a page needs its own
+grid rows, use `chrome` and write the row markup yourself.
 
 ## References
 
-* [Jekyll Quickstart](https://jekyllrb.com/docs/)
-* [BSA Style Guide](https://41zfam1pstr03my3b22ztkze-wpengine.netdna-ssl.com/wp-content/uploads/2019/08/310-132019-BSA-Brand_WEB_sm.pdf)
+* [Jekyll docs](https://jekyllrb.com/docs/)

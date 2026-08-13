@@ -1,0 +1,22 @@
+church:
+  name: Stone Oak Church
+  url: https://www.stoneoakchurch.org/
+  statement_of_faith: https://www.stoneoakchurch.org/about
+  address: 20024 Crescent Oaks San Antonio TX 78258
+  maps_url: https://www.google.com/maps/place/Stone+Oak+Cumberland+Presbyterian+Church/@29.6344138,-98.5012656,17z/data=!3m1!4b1!4m6!3m5!1s0x865c626cf349a31b:0x14917ede61ac656d!8m2!3d29.6344138!4d-98.4986907!16s%2Fg%2F1tcz_yq9?entry=ttu
+
+programs:
+  scouting: https://www.scouting.org/
+  cub_scouts: https://www.scouting.org/programs/cub-scouts/
+  scouts_bsa: https://www.scouting.org/programs/scouts-bsa/
+
+join:
+  - audience: Boys or Girls in K-5 grade
+    label: More Info Pack 226
+    more_info: https://my.scouting.org/more-info/be8829c1-56ba-4c79-8e3a-b76fe9b1767f&beascout=true
+  - audience: Boys in 6-12 grade
+    label: More Info Boys Troop 226
+    more_info: https://my.scouting.org/more-info/7c1a8d7d-ea26-43af-ad28-c919cb9de895&beascout=true
+  - audience: Girls in 6-12 grade
+    label: More Info Girls Troop 226G
+    more_info: https://my.scouting.org/more-info/3431e610-a3b6-40ba-aa07-7faf664e8319&beascout=true

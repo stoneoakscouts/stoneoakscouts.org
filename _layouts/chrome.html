@@ -7,6 +7,10 @@
       content="troop 226, troop 226g, pack 226, troop, pack, 226, 226g, scouts, scouting, stone oak church, stone oak scouts, stone oak"
     />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      name="description"
+      content="{{ page.description | default: site.description }}"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -19,13 +23,14 @@
       <div class="content-wrap">
         <header>
           <div class="banner">
-            <div class="container" style="overflow: hidden">
+            <div class="container">
               <div class="row">
                 <h1 class="title ten columns">{{site.title}}</h1>
                 <img
-                  src="{{site.imageurl}}/website_designed_logo.png"
-                  height="60px"
-                  width="60px"
+                  src="{{site.imageurl}}/website_designed_logo-180.png"
+                  height="60"
+                  width="60"
+                  alt=""
                   class="logo u-pull-right two columns"
                 />
               </div>
@@ -46,7 +51,7 @@
         <main class="container">{{content}}</main>
       </div>
       <footer>
-        <p class="row u-center">Copyright &copy; 2024</p>
+        <p class="row u-center">Copyright &copy; {{ 'now' | date: '%Y' }}</p>
       </footer>
     </div>
   </body>

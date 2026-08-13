@@ -76,6 +76,9 @@ main {
 .banner {
   background-color: $scouting-blue;
 }
+.banner .container {
+  overflow: hidden;
+}
 .banner h1 {
   margin: 1rem 0;
 }
@@ -97,6 +100,7 @@ main {
 .wide-photo {
   box-sizing: border-box;
   max-width: 100%;
+  height: auto;
   padding: 2.5rem 0;
 }
 
