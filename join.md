@@ -18,9 +18,9 @@ two troops in [Scouts BSA]({{ site.data.units.programs.scouts_bsa }}). Both troo
 18 years old.
 
 [{{ site.data.units.church.name }}]({{ site.data.units.church.url }}) is our fantastic home! You can find us meeting
-most Monday nights during the school year at, [{{ site.data.units.church.address }}]({{ site.data.units.church.maps_url }}).
+most Monday nights during the school year at [{{ site.data.units.church.address }}]({{ site.data.units.church.maps_url }}).
 
-The Pack and both troops, all begin at their meetings at 7:00. The Cub Scouts
+The Pack and both troops begin their meetings at 7:00. The Cub Scouts
 wrap up by 8:00 and the troops end between 8:15 and 8:30.
 
 To get more information about any of our scout units or to join, please use the
