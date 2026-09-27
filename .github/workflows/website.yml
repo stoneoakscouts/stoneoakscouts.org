@@ -1,0 +1,76 @@
+name: website
+
+on:
+  push:
+  pull_request:
+
+# Main deploys queue so two sync --delete runs cannot overlap.
+# Other refs cancel an older run when a newer commit arrives.
+concurrency:
+  group: website-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+permissions:
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  SITE_BUCKET: stoneoakscouts-default-origin
+  # HTML is checked on every visit. main.css is cached for a year per ?v=,
+  # which the distribution includes in the cache key. Images are not in this bucket.
+  ASSET_CACHE_CONTROL: public, max-age=31536000, immutable
+  HTML_CACHE_CONTROL: public, max-age=0, must-revalidate
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Build site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      - uses: actions/upload-artifact@v7
+        with:
+          name: site
+          path: _site
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: site
+          path: _site
+      - name: Check the built site
+        run: |
+          if [[ ! -f _site/index.html || ! -f _site/assets/css/main.css ]]; then
+            echo "Built site is missing index.html or main.css; refusing to sync." >&2
+            exit 1
+          fi
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::782389773908:role/website-deploy
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Publish site
+        run: |
+          aws s3 sync _site "s3://${SITE_BUCKET}" \
+            --delete \
+            --cache-control "${ASSET_CACHE_CONTROL}"
+          # A second copy, not a second sync. Excluding HTML from sync --delete
+          # would remove the live pages.
+          aws s3 cp _site "s3://${SITE_BUCKET}" \
+            --recursive \
+            --exclude "*" \
+            --include "*.html" \
+            --cache-control "${HTML_CACHE_CONTROL}"

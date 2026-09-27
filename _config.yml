@@ -3,6 +3,8 @@ title: Stone Oak Scouts
 description: Cub Scout Pack 226, Boys Troop 226, and Girls Troop 226G, a ministry of Stone Oak Church in San Antonio.
 imageurl: https://stoneoakscouts.org/images
 exclude: ["README.md", "temp-226-leader-bios.md"]
+sass:
+  sourcemap: development
 kramdown:
   auto_ids: false
   smart_quotes: ["apos", "apos", "quot", "quot"]
